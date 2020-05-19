@@ -12,15 +12,18 @@ int main(){
     cin >> length >> swapLen;
     cin >> line;
 
-    for (int i : line){
-        if (line[i] = 'B'){
-            if (i + swapLen < length){
-                char temp = line[i+swapLen];
-                line[i+swapLen] = line[i];
-                line[i] = temp;
+    for (int i = 0; i < length; i++){
+        if (line[i] == 'B'){
+            for(int j = (i + 1); j < (i+swapLen+1); j++){
+                if(line[j] == 'G'){
+                    char temp = line[j];
+                    line[j] = line[i];
+                    line[i] = temp;
+                    break;
+                }
             }
         }
     }
-    cout << line;
+    cout << line << endl;
 
 }
