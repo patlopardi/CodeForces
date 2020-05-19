@@ -14,14 +14,19 @@ int main(){
 
     for (int i = 0; i < length; i++){
         if (line[i] == 'B'){
-            for(int j = (i + 1); j < (i+swapLen+1); j++){
+            for(int j = swapLen + i; j > i; j--){
                 if(line[j] == 'G'){
                     char temp = line[j];
-                    line[j] = line[i];
+                    line[j] = 'D';
                     line[i] = temp;
                     break;
                 }
             }
+        }  
+}
+    for(int i = 0; i < length; i++){
+        if(line[i] == 'D'){
+            line[i] = 'B';
         }
     }
     cout << line << endl;
