@@ -14,7 +14,7 @@ int main(){
             ++count;
         }
     }
-    cout << count;
 
+    cout << count;
     return  0;
 }
