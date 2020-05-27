@@ -1,11 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <string>
 #include <unordered_map>
 using namespace std;
 
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
     unordered_map<char, int> inNamesMap; 
     unordered_map<char, int> combinedMap;
     string name1, name2, combined;
